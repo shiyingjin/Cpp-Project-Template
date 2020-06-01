@@ -20,6 +20,7 @@ set(TEST_LIBS gtest gtest_main pthread)
 add_subdirectory("${PROJECT_SOURCE_DIR}/extern/googletest" "extern/googletest" EXCLUDE_FROM_ALL)
 
 set(TEST_TARGET "${PROJECT_NAME}-Test")
-add_executable(${TEST_TARGET} ${SRC_LIST})
+set(TEST_SRC_LIST ${SRC_LIST} "lib/demo_test.cc")
+add_executable(${TEST_TARGET} ${TEST_SRC_LIST})
 target_link_libraries(${TEST_TARGET} ${TEST_LIBS})
 gtest_discover_tests(${TEST_TARGET})
