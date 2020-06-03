@@ -20,7 +20,7 @@ add_executable(${PROJECT_NAME} "main/main.cc" ${SRC_LIST})
 
 include(GoogleTest)
 enable_testing()
-set(TEST_LIBS gtest gtest_main)
+set(TEST_LIBS gtest_main)
 add_subdirectory("${PROJECT_SOURCE_DIR}/extern/googletest" "extern/googletest" EXCLUDE_FROM_ALL)
 
 if(MSVC)
