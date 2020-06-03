@@ -23,6 +23,10 @@ enable_testing()
 set(TEST_LIBS gtest gtest_main)
 add_subdirectory("${PROJECT_SOURCE_DIR}/extern/googletest" "extern/googletest" EXCLUDE_FROM_ALL)
 
+if(MSVC)
+    set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+endif()
+
 set(TEST_TARGET "${PROJECT_NAME}-Test")
 set(TEST_SRC_LIST ${SRC_LIST} "lib/demo_test.cc")
 add_executable(${TEST_TARGET} ${TEST_SRC_LIST})
