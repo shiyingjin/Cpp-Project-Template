@@ -6,7 +6,13 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-add_compile_options(-Wall -Wextra -Wpedantic -Wconversion -Werror)
+add_compile_options(-Wconversion -Werror)
+
+# Set default compile flags for GCC
+if(CMAKE_COMPILER_IS_GNUCXX)
+    message(STATUS "GCC detected, adding compile flags")
+    add_compile_options(-Wpedantic -Wall -Wextra")
+endif(CMAKE_COMPILER_IS_GNUCXX)
 
 include_directories(${PROJECT_SOURCE_DIR})
 
