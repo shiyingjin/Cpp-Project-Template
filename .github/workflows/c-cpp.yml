@@ -25,7 +25,6 @@ jobs:
         os:
           - macOS-latest
           - ubuntu-latest
-          - windows-latest
 
   build-with-bazel:
     runs-on: ${{ matrix.os }}
