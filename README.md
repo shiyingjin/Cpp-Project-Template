@@ -1,6 +1,6 @@
 # Cpp Project Template
 
-This is a template of cpp project which uses [cmake](<https://cmake.org/>) or [bazel](<https://bazel.build/>) as build tools.
+This is a template of cpp project which can use [cmake](<https://cmake.org/>) or [bazel](<https://bazel.build/>) as build tools.
 
 ## Use cmake
 
